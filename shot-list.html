@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f5f5f7" />
+    <meta name="description" content="The one-page shot list for photographing a home for a 3D tour: tick it off room by room." />
+    <!-- Reached by its link from the capture page, not by search. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%234da3ff'/%3E%3C/svg%3E" />
+    <title>Shot list</title>
+    <style>
+      /* One page you glance at between photos, standing in a lit room: light, high
+         contrast, big tick targets. Every step and number is CAPTURE.md's. */
+      :root {
+        --canvas: #f5f5f7;
+        --card: #ffffff;
+        --ink: #1d1d1f;
+        --ink-muted: #56565b;
+        --hairline: #d9d9de;
+        --accent: #0b63c4;
+        --tap: 44px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        background: var(--canvas);
+      }
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--ink);
+        font: 400 17px/1.47 system-ui, -apple-system, "Segoe UI", sans-serif;
+        -webkit-text-size-adjust: 100%;
+      }
+      main {
+        max-width: 620px;
+        margin: 0 auto;
+        padding: calc(28px + env(safe-area-inset-top)) 16px calc(40px + env(safe-area-inset-bottom));
+      }
+      h1 {
+        margin: 0;
+        font-size: 34px;
+        font-weight: 650;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+      .lead {
+        margin: 8px 0 20px;
+        color: var(--ink-muted);
+      }
+      .guide {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: 14px;
+        background: var(--ink);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .guide span:last-child {
+        color: #9ecbff;
+        white-space: nowrap;
+      }
+      section {
+        margin-top: 26px;
+      }
+      h2 {
+        margin: 0 0 8px;
+        font-size: 21px;
+        font-weight: 650;
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      h2 small {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ink-muted);
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: var(--card);
+        border: 1px solid var(--hairline);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      li + li {
+        border-top: 1px solid var(--hairline);
+      }
+      label {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 12px;
+        align-items: start;
+        min-height: var(--tap);
+        padding: 12px 14px;
+        cursor: pointer;
+      }
+      input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        margin: 1px 0 0;
+        accent-color: var(--accent);
+      }
+      .step strong {
+        font-weight: 600;
+      }
+      .step .why {
+        display: block;
+        margin-top: 2px;
+        font-size: 15px;
+        color: var(--ink-muted);
+      }
+      input:checked + .step {
+        color: var(--ink-muted);
+      }
+      input:checked + .step strong {
+        text-decoration: line-through;
+        text-decoration-thickness: 1px;
+      }
+      .rings {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 2px 12px;
+        margin-top: 6px;
+        font-size: 15px;
+        color: var(--ink-muted);
+      }
+      .rings b {
+        color: var(--ink);
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        text-align: right;
+      }
+      .again {
+        margin-top: 10px;
+        min-height: var(--tap);
+        padding: 10px 16px;
+        border: 1px solid var(--hairline);
+        border-radius: 12px;
+        background: var(--card);
+        color: var(--accent);
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .again:active {
+        transform: scale(0.98);
+      }
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+      footer {
+        margin-top: 28px;
+        font-size: 15px;
+        color: var(--ink-muted);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .again:active {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Shot list</h1>
+      <p class="lead">About ten minutes a room. Tick as you go; the ticks stay on this phone.</p>
+      <a class="guide" href="https://korshaug.github.io/tour3d-capture/">
+        <span>Let the phone show where each photo goes</span><span>Open ›</span>
+      </a>
+
+      <section aria-labelledby="once">
+        <h2 id="once">Once</h2>
+        <ul>
+          <li><label><input type="checkbox" data-key="jpeg" /><span class="step"><strong>Camera set to JPEG.</strong>
+            <span class="why">iPhone: Settings → Camera → Formats → Most Compatible. Android: usually already.</span></span></label></li>
+          <li><label><input type="checkbox" data-key="ready" /><span class="step"><strong>Doors open, usual lights on, blinds drawn.</strong>
+            <span class="why">Windows bright but not glaring. One kind of light per room.</span></span></label></li>
+          <li><label><input type="checkbox" data-key="people" /><span class="step"><strong>Nobody in the photos.</strong>
+            <span class="why">People, pets and you, mirrors included where you can.</span></span></label></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="room">
+        <h2 id="room">Each room <small>ticks clear with “Next room”</small></h2>
+        <ul>
+          <li><label><input type="checkbox" data-key="lock" data-room /><span class="step"><strong>Lock the exposure on a plain wall.</strong>
+            <span class="why">iPhone: press and hold until AE/AF LOCK. Android: press and hold, or Pro mode.</span></span></label></li>
+          <li><label><input type="checkbox" data-key="lens" data-room /><span class="step"><strong>1× lens, phone sideways.</strong>
+            <span class="why">Not 0.5×, not 2× or more.</span></span></label></li>
+          <li><label><input type="checkbox" data-key="spots" data-room /><span class="step"><strong>Three spots in a triangle,</strong> at least 1.5 m apart, away from the walls.
+            <span class="why">A long stride and a half. Not in a line.</span></span></label></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="spot">
+        <h2 id="spot">At each spot</h2>
+        <ul>
+          <li><label><input type="checkbox" data-key="s1" data-room /><span class="step"><strong>Spot 1</strong>
+            <span class="rings"><span>Level, turning round</span><span></span><b>~20</b>
+              <span>Tilted up, about 40°</span><span></span><b>~20</b>
+              <span>Tilted down, about 40°</span><span></span><b>~20</b>
+              <span>Straight up, straight down</span><span></span><b>1 + 1</b></span></span></label></li>
+          <li><label><input type="checkbox" data-key="s2" data-room /><span class="step"><strong>Spot 2</strong> <span class="why">Same again, after a minute's pause.</span></span></label></li>
+          <li><label><input type="checkbox" data-key="s3" data-room /><span class="step"><strong>Spot 3</strong> <span class="why">Same again, after a minute's pause.</span></span></label></li>
+          <li><label><input type="checkbox" data-key="door" data-room /><span class="step"><strong>Every doorway to the next room:</strong> a whole spot there too.
+            <span class="why">Stand in the opening where you see both rooms. It is what joins the rooms into one tour.</span></span></label></li>
+        </ul>
+        <p class="lead" style="margin-top: 10px">Turn about a hand's width at arm's length between photos, each still showing two-thirds of the
+          one before. Keep the phone in the same place in the air, turning around it. Which way you turn does not matter; keep
+          going the same way.</p>
+        <button class="again" type="button" id="again">Next room: clear this room's ticks</button>
+      </section>
+
+      <section aria-labelledby="after">
+        <h2 id="after">After</h2>
+        <ul>
+          <li><label><input type="checkbox" data-key="copy" /><span class="step"><strong>Copy the original photos</strong> with a cable or the Files app, one folder per room.
+            <span class="why">Not through a messaging app, not “smaller” in an email: both shrink the photos and strip when and how each was taken.</span></span></label></li>
+          <li><label><input type="checkbox" data-key="drop" /><span class="step"><strong>Drop each room's folder on its room in the app.</strong>
+            <span class="why">It checks every photo first and tells you, with a reason, any it sets aside.</span></span></label></li>
+        </ul>
+      </section>
+
+      <footer>The long version, with the reasons: CAPTURE.md in the tour3d app.</footer>
+    </main>
+    <script>
+      // Ticks are a convenience of this phone only: kept where the browser allows,
+      // and the page works the same when it does not (private browsing).
+      const KEY = "tour3d-shot-list";
+      const boxes = [...document.querySelectorAll("input[type=checkbox]")];
+      let saved = {};
+      try {
+        saved = JSON.parse(localStorage.getItem(KEY) || "{}");
+      } catch {
+        saved = {};
+      }
+      const store = () => {
+        try {
+          localStorage.setItem(KEY, JSON.stringify(saved));
+        } catch {
+          /* private browsing: ticks last for this visit */
+        }
+      };
+      for (const box of boxes) {
+        box.checked = saved[box.dataset.key] === true;
+        box.addEventListener("change", () => {
+          saved[box.dataset.key] = box.checked;
+          store();
+        });
+      }
+      document.getElementById("again").addEventListener("click", () => {
+        for (const box of boxes.filter((b) => b.hasAttribute("data-room"))) {
+          box.checked = false;
+          saved[box.dataset.key] = false;
+        }
+        store();
+        document.getElementById("room").scrollIntoView({ block: "start" });
+      });
+    </script>
+  </body>
+</html>
