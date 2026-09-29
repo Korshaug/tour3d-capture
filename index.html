@@ -18,6 +18,7 @@ var e=Math.PI/180,t=[{name:`level`,pitch:0},{name:`up`,pitch:40},{name:`down`,pi
         <h1>Photograph a room</h1>
         <p>Stand in the first spot and hold the phone sideways at chest height. A dot shows where each photo goes;
           hold still on it and the photo takes itself.</p>
+        <p>Keep the phone in one place and step around it, as if it sat on a pin: swung out around you, it sees near things shift, and they break where the photos meet.</p>
         <label class="field">
           <span>Which room?</span>
           <input id="room" type="text" maxlength="60" autocomplete="off" placeholder="Living room" data-testid="room" />
@@ -50,7 +51,8 @@ var e=Math.PI/180,t=[{name:`level`,pitch:0},{name:`up`,pitch:40},{name:`down`,pi
         <section class="stored" id="stored" data-testid="stored" hidden></section>
         <h1>Photograph a room</h1>
         <p>Each photo goes to ${S(e.label?`<strong>${w(e.label)}</strong> on the laptop`:`the laptop`)} as it is
-          taken. Where are you standing?</p>
+          taken. Keep the phone in one place and step around it, as if it sat on a pin: swung out around you, it sees near things shift, and they break where the photos meet.</p>
+        <p>Where are you standing?</p>
         ${S(R(`target`))}
         ${S(e.collecting?``:`<p class="note" role="status">The laptop is building this tour, so it cannot take photos now. Choose “Change photos” there, then open this page again.</p>`)}
       </div>
@@ -92,7 +94,7 @@ var e=Math.PI/180,t=[{name:`level`,pitch:0},{name:`up`,pitch:40},{name:`down`,pi
         <li><strong>Main lens, sideways.</strong> Not the 0.5× lens. Hold the phone in landscape at chest height.</li>
         <li><strong>Lock the exposure.</strong> Press and hold on a wall until it says AE/AF lock.</li>
         <li><strong>Three rings from one spot.</strong> 20 photos turning left, then 20 tilted up, then 20 tilted down.
-          One straight up and one straight down.</li>
+          One straight up and one straight down. Keep the phone in one place and step around it.</li>
         <li><strong>Pause a minute, then move.</strong> Walk at least 1.5 m to the next spot. Three spots per room,
           in a triangle.</li>
         ${S(E.link?`<li><strong>Then</strong> come back to this page and choose <strong>Send photos from Files</strong>.</li>`:`<li><strong>Then</strong> put the room's photos in one folder on the computer and drop it on the room in the app.</li>`)}
